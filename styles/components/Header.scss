@@ -1,0 +1,19 @@
+.Header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include scut-padding($gutter);
+    @media (min-width: #{$mq-large + $gutter*2}) {
+      max-width: $mq-large;
+      @include scut-padding(n 0);
+    }
+    @include scut-center-block;
+    position: relative;
+  }
+}

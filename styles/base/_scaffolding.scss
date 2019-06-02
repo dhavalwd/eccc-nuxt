@@ -1,0 +1,10 @@
+// Generic site wrapper
+.Wrapper {
+  @include scut-padding($gutter $gutter $gutter*3 $gutter);
+  @media (min-width: #{$mq-large + $gutter*2}) {
+    max-width: $mq-large;
+    @include scut-padding(n 0);
+  }
+  @include scut-center-block;
+  position: relative;
+}

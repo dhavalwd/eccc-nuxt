@@ -1,0 +1,22 @@
+.Menu {
+  ul {
+    @include scut-margin(0);
+    @include scut-padding(0);
+    display: flex;
+    justify-content: flex-start;
+
+    li {
+      font-family: $font-source-pro;
+      font-weight: $font-weight-bold;
+      list-style: none;
+      @include scut-padding(n $gutter);
+
+      a {
+        padding-bottom: 3px;
+        &:hover {
+          border-bottom: 1px solid $gold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "name": "eccc",
+  "version": "0.1.0",
+  "description": "East Coast Cricket Club - ECC's Official Website",
+  "author": "Dhaval Vyas <dhavs1989@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dhavalwd/eccc-nuxt.git"
+  },
+  "private": false,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/vue-fontawesome": "^0.1.2",
+    "@nuxtjs/apollo": "^3.0.7",
+    "apollo-cache-inmemory": "^1.1.12",
+    "apollo-fetch": "^0.7.0",
+    "apollo-link": "^1.2.1",
+    "apollo-link-http": "^1.5.3",
+    "bootstrap-sass": "^3.4.1",
+    "bourbon": "^5.1.0",
+    "bulma": "^0.7.1",
+    "bulma-timeline": "^3.0.0",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.8.0",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "node-fetch": "^2.3.0",
+    "nuxt": "latest",
+    "scut": "^1.4.0",
+    "typeface-montserrat": "0.0.54",
+    "typeface-source-sans-pro": "0.0.54",
+    "vue-apollo": "^3.0.0-beta.16",
+    "vue-click-outside": "^1.0.7",
+    "vue-disqus": "^3.0.3",
+    "vue-instagram": "^2.0.1",
+    "vue-server-renderer": "^2.5.13",
+    "vue-slick": "^1.1.13"
+  },
+  "resolutions": {
+    "vue-apollo": "3.0.0-beta.16"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "devDependencies": {
+    "@nuxtjs/font-awesome": "^1.0.3",
+    "@nuxtjs/google-analytics": "^2.0.2",
+    "@nuxtjs/markdownit": "^1.2.0",
+    "axios": "^0.18.0",
+    "babel-eslint": "^8.2.6",
+    "cross-env": "^5.1.4",
+    "eslint": "^5.2.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-html": "^4.0.5",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^3.1.0",
+    "less": "^3.8.0",
+    "less-loader": "^4.0.4",
+    "marked": "^0.4.0",
+    "node-sass": "^4.8.3",
+    "npm-force-resolutions": "0.0.2",
+    "sass-loader": "^7.0.3",
+    "vue-style-loader": "^4.1.1",
+    "webpack": "^4.3.0"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "webpack"
+    ]
+  }
+}

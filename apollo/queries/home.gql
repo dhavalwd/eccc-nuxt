@@ -1,0 +1,34 @@
+query ($id: ID) {
+  homePage(where: {id: $id}) {
+    status
+    id
+    heroTitle
+    heroImage {
+      status
+      updatedAt
+      createdAt
+      id
+      handle
+      fileName
+      height
+      width
+      size
+      mimeType
+      url
+    }
+    heroCtaText
+    heroCtaLink
+    section1Title
+    section1Intro {
+      html
+    }
+    section1CtaText
+    section1CtaLink
+    section1ScheduleTitle
+    section1ScheduleDescription
+    section1ScheduleLink
+    section1StatTitle
+    section1StatDescription
+    section1StatLink
+  }
+}

@@ -1,0 +1,25 @@
+@include scut-reset-border-box;
+@include scut-reset-antialias;
+@include scut-reset-semanticize;
+@include scut-reset-pointer;
+@include scut-reset-form;
+@include scut-reset-media;
+@include scut-reset-figure;
+
+// The button reset is too extreme - interferes with Pikaday
+button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}

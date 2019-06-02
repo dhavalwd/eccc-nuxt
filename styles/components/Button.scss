@@ -1,0 +1,12 @@
+a.Button {
+    background: $gold;
+    color: $white;
+    @include scut-padding(($gutter * 0.5) ( $gutter * 2 ));
+    font-family: $font-montserrat;
+    font-weight: $font-weight-bold;
+
+    &:hover, &:focus {
+        background: darken($gold, 5%);
+        color: $white;
+    }
+}

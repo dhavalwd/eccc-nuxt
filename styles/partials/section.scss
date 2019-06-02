@@ -1,0 +1,30 @@
+$section-padding: 48px;
+
+.section {
+    @include scut-padding($section-padding);
+
+    &--centered {
+        text-align: center;
+    }
+}
+
+.section-heading {
+    h1 {
+        @include scut-margin(n n ($gutter*2));
+    }
+}
+
+.section-intro {
+    @include scut-center-block(600px);
+    color: $grey;
+    line-height: 1.8;
+    font-weight: 700;
+    @include scut-margin(n n ($gutter * 2));
+}
+
+.section-divider {
+    @include scut-center-block(80%);
+    height: 1px;
+    background-color: $mild-grey;
+    @include scut-margin(($gutter*2) n);
+}

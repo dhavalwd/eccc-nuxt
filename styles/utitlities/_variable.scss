@@ -1,0 +1,77 @@
+
+// Typography
+$font-stack-default: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font-source-pro: 'Source Sans Pro', $font-stack-default;
+$font-montserrat: 'Montserrat', $font-stack-default;
+
+$font-weight-extralight: 200;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// Same as Bootstrap's $font-size-base
+$font-size-base: 16px;
+$scut-rem-base: scut-strip-unit($font-size-base);
+// Same pattern as Bootstrap's $font-size- variables
+$font-size-giant: ceil(($font-size-base * 2.25)); // 36px
+$font-size-huge: ceil(($font-size-base * 2)); // 32px
+$font-size-bigger: ceil(($font-size-base * 1.75)); // 28px
+$font-size-big: ceil(($font-size-base * 1.5)); // 24px
+$font-size-largest: ceil(($font-size-base * 1.25)); // 20px
+$font-size-larger: ceil(($font-size-base * 1.125)); // 18px
+$font-size-large: ceil(($font-size-base * 1)); // 16px
+$font-size-small: ceil(($font-size-base * 0.8725)); // 14px
+$font-size-smaller: ceil(($font-size-base * 0.8125)); // 13px
+$font-size-smallest: ceil(($font-size-base * 0.75)); // 12px
+$font-size-tiny: ceil(($font-size-base * 0.6875)); // 11px
+$font-size-micro: ceil(($font-size-base * 0.625)); // 10px
+
+$line-height-tighter: 1.1; // 16/14
+$line-height-tight: 1.28571; // 16/14
+$line-height-tall: 1.6; // 22/14
+
+// Basic Colours
+$light-grey: rgb(240, 240, 240);
+$border-grey: rgb(231, 231, 231);
+$white: #ffffff;
+$black: #000000;
+$grey: #6A6A6A;
+$dark-grey: rgb(56, 56, 56);
+$mild-grey: rgb(173, 173, 173);
+$red: rgb(204,51,51);
+
+
+// brand colours
+$gold: #AE862D;
+$maroon: #7A1640;
+$text-color: $black;
+
+
+
+/*
+ * Overrides
+ */
+
+  // Bootstrap
+
+  //** Number of columns in the grid.
+  $grid-columns: 12;
+  //** Padding between columns. Gets divided in half for the left and right.
+  $grid-gutter-width: 16px;
+  $gutter: $grid-gutter-width;
+
+  $screen-xs-min: 480px;
+  $screen-sm-min: 640px;
+  $screen-md-min: 768px;
+  $screen-lg-min: 960px;
+
+  $btn-default-color:  $black;
+  $btn-default-bg:     $white;
+
+  $btn-primary-color:  $white;
+  $btn-primary-bg:     $gold;
+  $btn-primary-border: $gold;
+
+  $btn-info-color:  $gold;
+  $btn-info-bg:     $white;
+  $btn-info-border: $gold;
+
