@@ -1,0 +1,49 @@
+.Section {
+  @extend %Section;
+
+  &--grey {
+    background-color: $mild-grey;
+  }
+
+  &--full {
+    padding-top: 0;
+    padding-bottom: 0;
+    .container {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .container {
+    @include scut-clearfix;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--divider {
+    padding-top: 0;
+    .container {
+      border-top: 1px solid rgba($mild-grey, 0.4);
+      @extend %Section-padding-top;
+    }
+  }
+}
+
+.Section-heading {
+  @include scut-margin(n n $gutter * 2);
+  h2 {
+    margin: 0;
+    font-size: $font-size-giant;
+  }
+}
+
+.Section-intro {
+  @include scut-center-block(600px);
+
+  p {
+    font-family: $font-montserrat;
+    font-weight: $font-weight-extralight;
+  }
+}

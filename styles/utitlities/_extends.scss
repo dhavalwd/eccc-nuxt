@@ -1,0 +1,24 @@
+%Section-padding-top {
+  padding-top: $gutter * 2;
+  @media #{$small-up} {
+    padding-top: $gutter * 2.5;
+  }
+  @media #{$medium-up} {
+    padding-top: $gutter * 3;
+  }
+}
+
+%Section-padding-bottom {
+  padding-bottom: $gutter * 2;
+  @media #{$small-up} {
+    padding-bottom: $gutter * 2.5;
+  }
+  @media #{$medium-up} {
+    padding-bottom: $gutter * 3;
+  }
+}
+
+%Section {
+  @extend %Section-padding-top;
+  @extend %Section-padding-bottom;
+}

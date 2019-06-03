@@ -1,39 +1,74 @@
 <template>
   <main class="main" id="main">
-      <Hero :title="Hola" :backgroundUrl="homeData.heroImage.url">
+      <Hero :backgroundUrl="homeData.heroImage.url">
         <template slot="heroTitle">{{homeData.heroTitle}}</template>
-        <nuxt-link to="/about" slot="heroCTA" class="btn Button">Learn More</nuxt-link>
+        <nuxt-link :to="homeData.heroCtaLink" slot="heroCTA" class="btn Button">{{homeData.heroCtaText}}</nuxt-link>
         <img src="~/static/images/scroll-icon.svg" slot="heroScroll" />
       </Hero>
+      <Section class="Section--center">
+          <template slot="sectionContent">
+              <div class="Section-heading">
+                  <h2>{{homeData.section1Title}}</h2>
+              </div>
+              <div class="Section-intro" v-html="homeData.section1Intro.html"></div>
+              <nuxt-link :to="homeData.section1CtaLink" class="btn Button">{{homeData.section1CtaText}}</nuxt-link>
+          </template>
+      </Section>
+      <Section class="Section--divider">
+          <template slot="sectionContent">
+            <div class="Grid Grid--two">
+              <div class="Grid-item Grid-item--center">
+                <div class="Box">
+                  <div class="Box-icon">
+                    <font-awesome-icon :icon="['fa', 'calendar-alt']" />
+                  </div>
+                  <div class="Box-heading">
+                    <h3>{{homeData.section1ScheduleTitle}}</h3>
+                  </div>
+                  <div class="Box-desc">
+                    <p>{{homeData.section1ScheduleDescription}}</p>
+                  </div>
+                  <a :href="homeData.section1ScheduleLink" class="btn Button Button--link" target="_blank">Read More</a>
+                </div>
+              </div>
+              <div class="Grid-item Grid-item--center">
+                <div class="Box">
+                  <div class="Box-icon">
+                    <font-awesome-icon :icon="['fa', 'chart-bar']" />
+                  </div>
+                  <div class="Box-heading">
+                    <h3>{{homeData.section1StatTitle}}</h3>
+                  </div>
+                  <div class="Box-desc">
+                    <p>{{homeData.section1StatDescription}}</p>
+                  </div>
+                  <a :href="homeData.section1StatLink" class="btn Button Button--link" target="_blank">Read More</a>
+                </div>
+              </div>
+            </div>
+          </template>
+      </Section>
   </main>
 </template>
 
 <script>
   import home from '~/apollo/queries/home'
-  import Author from '~/components/author'
   import Hero from '~/components/Hero'
-  import IntroBox from '~/components/intro_box'
-  import BlogPostCard from '~/components/Blog_Post_Card'
-  import Card from '~/components/dv-card'
-  import Instafeed from '~/components/instafeed'
+  import Section from '~/components/Section'
   const heroBackground = require('~/static/images/home-hero-bg.png')
 
   export default {
     components: {
       home,
-      Author,
       Hero,
-      IntroBox,
-      BlogPostCard,
-      Card,
-      Instafeed,
+      Section,
       heroBackground
     },
     head () {
       return {
-        title: 'Dhaval Vyas - Front End Developer',
+        title: 'ECCC - East Coast Cricket Club',
         meta: [
-          { hid: 'home', name: 'dhaval vyas', content: 'Dhaval Vyas is a Front End developer from Halifax, Nova Scotia, Canada. He creates for the web. This is portfolio of Dhaval Vyas.' }
+          { hid: 'home', name: 'east coast cricket club', content: 'East Coast Cricket Club, formerly Halifax Gold, has been most the successful club since the inception of Halifax Cricket league in 2010. We pride ourselves in winning the most championships, the highest player retention and being only club with the most players that represent in the Nova Scotia Provincial team which is the strongest cricket team in Atlantic region.' }
         ]
       }
     },
@@ -43,8 +78,6 @@
         let {data} = await app.apolloProvider.defaultClient.query(
           { query: home, prefetch: true, variables: {id: 'cjwehihwwtsy10830rkh5r7m6'} }
         )
-
-        console.log(data);
 
         // ToDo: Convert date in readable format and pass it to data
         // for (let i = 0; i < data.allPosts.length; i++) {
@@ -69,105 +102,3 @@
     }
   }
 </script>
-
-<style lang="scss" scoped type="text/scss">
-  @import 'slick-carousel/slick/slick.css';
-  @import '../styles/main.scss';
-
-  .hero {
-    position: relative;
-  }
-
-  .subtitle {
-    color: #f3f3f3;
-  }
-  
-  section.home_about_me {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6em 0;
-  }
-
-  .about-me-description {
-    font-size: 1.5em;
-    text-align: center;
-    // @extend %font-lora;
-    padding: 2em;
-    font-style: italic;
-  }
-
-  // Recent Posts
-  .Recent_Posts-title {
-    h2 {
-      text-align: center;
-    }
-  }
-  .Recent_Posts-details {
-    display: flex;
-    flex-flow: row; 
-    flex-wrap: wrap;
-  }
-
-  .Recent_Posts-item {
-    flex: 0 0 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-  } 
-
-  .noBlogs {
-    h2 {
-      font-size: 2rem;
-    }
-  }
-
-  .column {
-    width: 100%;
-    @media (min-width:640px) {
-      width: 33%;
-    }
-  }
-
-  /* Tablet (medium) screens */
-  @media (min-width: 768px) {
-    .Recent_Posts-item {
-      flex: 0 0 50%;     
-    }
-  }
-
-  /* Large screens */
-  @media (min-width: 960px) {
-    .Recent_Posts-item{
-      flex: 0 0 33.33%;
-    }
-    .Recent_Posts-item:first-of-type {
-      flex: 0 0 33.33%;
-    }
-  }
-
-  // Recent Projects
-  .Recent_Projects-title {
-    padding: 24px 0;
-    h2 {
-      text-align: center;
-    }
-  }
-
-  .Recent_Project-columns {
-    display: flex;
-    flex-flow: row; 
-    flex-wrap: wrap;
-  }
-
-  .Recent_Project-column {
-    width: 100%;
-    padding: 20px 30px;
-
-    @media (min-width: 640px) {
-      width: 50%;
-      padding: 0 24px 32px;
-    }
-  }
-
-</style>
-

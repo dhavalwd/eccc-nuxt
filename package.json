@@ -30,8 +30,6 @@
     "node-fetch": "^2.3.0",
     "nuxt": "latest",
     "scut": "^1.4.0",
-    "typeface-montserrat": "0.0.54",
-    "typeface-source-sans-pro": "0.0.54",
     "vue-apollo": "^3.0.0-beta.16",
     "vue-click-outside": "^1.0.7",
     "vue-disqus": "^3.0.3",

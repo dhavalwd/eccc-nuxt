@@ -41,11 +41,8 @@ module.exports = {
       { hid: 'keywords', name: 'keywords', content: 'ECCC, Halifax, East Coast, Cricket, Club, East Coast Cricket Club, HCL, NSCA, Nova Scotia' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:900' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Permanent+Marker:400' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Work+Sans' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lora:400,700i' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-96x96.png' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:900&display=swap' }
     ],
     script: [
       { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }

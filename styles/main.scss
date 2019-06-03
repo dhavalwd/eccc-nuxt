@@ -40,6 +40,8 @@
  */
   @import "../styles/utitlities/responsive";
   @import "../styles/utitlities/typography";
+  @import "../styles/utitlities/extends";
+  @import "../styles/utitlities/nuxt";
 
 // Base
 @import "../styles/base/scaffolding";
@@ -48,11 +50,14 @@
 @import "../styles/partials/section";
 
 // All Components
+@import "./components/Grid";
 @import "./components/Logo";
 @import "./components/Header";
 @import "./components/Menu";
 @import "./components/Hero";
 @import "./components/Button";
+@import "./components/Section";
+@import "./components/Box";
 
 // @import "../components/Logo/Logo.scss";
 // @import "../components/Hero/Hero.scss";

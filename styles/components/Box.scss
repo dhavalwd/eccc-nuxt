@@ -1,0 +1,19 @@
+.Box {
+  &-icon {
+    @include scut-margin(n n $gutter*2.5);
+    svg {
+      font-size: $font-size-giant*2;
+    }
+  }
+  &-heading {
+    @include scut-margin(n n $gutter);
+    h3 {
+      font-size: $font-size-big;
+    }
+  }
+
+  &-desc {
+    @include scut-margin(n n $gutter);
+    @include scut-center-block(80%);
+  }
+}
