@@ -46,6 +46,9 @@
 // Base
 @import "../styles/base/scaffolding";
 
+// Plugins
+// @import '../node_modules/slick-carousel/slick/slick.css';
+
 // Partials
 @import "../styles/partials/section";
 
@@ -58,6 +61,7 @@
 @import "./components/Button";
 @import "./components/Section";
 @import "./components/Box";
+@import "./components/Players";
 
 // @import "../components/Logo/Logo.scss";
 // @import "../components/Hero/Hero.scss";

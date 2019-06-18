@@ -30,5 +30,25 @@ query ($id: ID) {
     section1StatTitle
     section1StatDescription
     section1StatLink
+    ourTeamTitle
+    teamPlayers {
+      id
+      playerName
+      playerRole
+      playerImage {
+        status
+        updatedAt
+        createdAt
+        id
+        handle
+        fileName
+        height
+        width
+        size
+        mimeType
+        url
+      }
+    }
+    ourTeamLink
   }
 }

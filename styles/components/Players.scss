@@ -1,0 +1,59 @@
+.Players {
+  @include scut-padding(n ($gutter*3));
+  @include scut-margin(($gutter*2) n);
+  &-item {
+    @include scut-padding(n $gutter);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &-image {
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &-name {
+    font-family: $font-source-pro;
+    font-weight: $font-weight-black;
+    color: $maroon;
+    font-size: $font-size-largest;
+  }
+
+  &-role {
+    font-family: $font-source-pro;
+    font-weight: $font-weight-bold;
+  }
+
+  &-prev {
+    left: -($gutter*3);
+    background-image: url("~assets/images/left-arrow.svg");
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include scut-size(40px);
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &-next {
+    right: -($gutter*3);
+    background-image: url("~assets/images/right-arrow.svg");
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include scut-size(40px);
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &-content {
+    @include scut-margin($gutter n n);
+  }
+}

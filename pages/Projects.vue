@@ -435,7 +435,7 @@
 </script>
 
 <style lang="scss" scoped type="text/scss">
-@import 'slick-carousel/slick/slick.css';
+// @import 'slick-carousel/slick/slick.css';
 @import '../styles/main.scss';
 
 .projects-all {
