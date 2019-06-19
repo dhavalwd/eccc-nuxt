@@ -1,6 +1,8 @@
 .Logo {
     img {
       max-height: 50px;
+      @media #{$medium-up} {
+        max-height: 100px;
+      }
     }
   }
-  

@@ -26,9 +26,11 @@ query ($id: ID) {
     section1CtaLink
     section1ScheduleTitle
     section1ScheduleDescription
+    section1ScheduleLinkText
     section1ScheduleLink
     section1StatTitle
     section1StatDescription
+    section1StatLinkText
     section1StatLink
     ourTeamTitle
     teamPlayers {
@@ -49,6 +51,26 @@ query ($id: ID) {
         url
       }
     }
+    ourTeamLinkText
     ourTeamLink
+    ourSponsorsTitle
+    sponsorses {
+      id
+      sponsorLogo {
+        status
+        updatedAt
+        createdAt
+        id
+        handle
+        fileName
+        height
+        width
+        size
+        mimeType
+        url
+      }
+    }
+    ourSponsorsLinkText
+    ourSponsorsLink
   }
 }

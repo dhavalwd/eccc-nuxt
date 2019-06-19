@@ -36,7 +36,7 @@
                 :href="homeData.section1ScheduleLink"
                 class="btn Button Button--link"
                 target="_blank"
-              >Read More</a>
+              >{{homeData.section1ScheduleLinkText}}</a>
             </div>
           </div>
           <div class="Grid-item Grid-item--center">
@@ -54,7 +54,7 @@
                 :href="homeData.section1StatLink"
                 class="btn Button Button--link"
                 target="_blank"
-              >Read More</a>
+              >{{homeData.section1StatLinkText}}</a>
             </div>
           </div>
         </div>
@@ -82,7 +82,24 @@
             </no-ssr>
           </div>
         </div>
-        <nuxt-link :to="homeData.ourTeamLink" class="btn Button">{{homeData.section1CtaText}}</nuxt-link>
+        <nuxt-link :to="homeData.ourTeamLink" class="btn Button">{{homeData.ourTeamLinkText}}</nuxt-link>
+      </template>
+    </Section>
+    <Section class="Section--center">
+      <template slot="sectionContent">
+        <div class="Section-heading">
+          <h2>{{homeData.ourSponsorsTitle}}</h2>
+        </div>
+        <div class="Section-content">
+          <div class="Sponsors Grid Grid--three">
+            <div v-for="sponsor in sponsors" class="Sponsors-item Grid-item">
+              <div class="Sponsors-image">
+                <img :src="sponsor.sponsorLogo.url" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <nuxt-link :to="homeData.ourSponsorsLink" class="btn Button">{{homeData.ourSponsorsLinkText}}</nuxt-link>
       </template>
     </Section>
   </main>
@@ -127,7 +144,8 @@ export default {
 
     return {
       homeData: data.homePage,
-      players: data.homePage.teamPlayers
+      players: data.homePage.teamPlayers,
+      sponsors: data.homePage.sponsorses
     };
   },
   data() {

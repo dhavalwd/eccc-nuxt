@@ -1,4 +1,5 @@
 .Menu {
+  display: none;
   ul {
     @include scut-margin(0);
     @include scut-padding(0);
