@@ -1,0 +1,14 @@
+.Content {
+  max-width: 960px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: $font-size-bigger;
+    @include scut-margin(($gutter*2) n $gutter);
+  }
+
+  p {
+    @include scut-margin(n n $gutter);
+    line-height: $font-size-bigger;
+  }
+}

@@ -8,12 +8,12 @@
       <li>
         <nuxt-link to="/about">About</nuxt-link>
       </li>
-      <li>
+      <!-- <li>
         <nuxt-link to="/blog">News</nuxt-link>
       </li>
       <li>
         <nuxt-link to="/contact">News</nuxt-link>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>

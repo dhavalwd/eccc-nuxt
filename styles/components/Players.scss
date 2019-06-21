@@ -28,7 +28,7 @@
   }
 
   &-prev {
-    left: -($gutter*3);
+    left: -($gutter*3) !important;
     background-image: url("~assets/images/left-arrow.svg");
     background-size: 32px 32px;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@
   }
 
   &-next {
-    right: -($gutter*3);
+    right: -($gutter*3) !important;
     background-image: url("~assets/images/right-arrow.svg");
     background-size: 32px 32px;
     background-repeat: no-repeat;

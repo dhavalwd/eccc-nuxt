@@ -140,8 +140,6 @@ export default {
       variables: { id: "cjwehihwwtsy10830rkh5r7m6" }
     });
 
-    console.log('data.homePage.teamPlayers', data.homePage.teamPlayers);
-
     return {
       homeData: data.homePage,
       players: data.homePage.teamPlayers,
