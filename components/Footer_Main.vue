@@ -10,12 +10,12 @@
           <div class="Footer-social">
             <ul>
               <li class="facebook">
-                <a href="#">
+                <a href="https://www.facebook.com/cricketclubofeastcoast/" target="_blank">
                   <font-awesome-icon :icon="['fab', 'facebook']"/>
                 </a>
               </li>
               <li class="instagram">
-                <a href="#">
+                <a href="https://www.instagram.com/eastcoastcricketclub/" target="_blank">
                   <font-awesome-icon :icon="['fab', 'instagram']"/>
                 </a>
               </li>
