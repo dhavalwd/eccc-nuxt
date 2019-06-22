@@ -11,9 +11,9 @@
       <li>
         <nuxt-link to="/team">Team</nuxt-link>
       </li>
-      <!-- <li>
-        <nuxt-link to="/contact">News</nuxt-link>
-      </li> -->
+      <li>
+        <nuxt-link to="/contact">Contact</nuxt-link>
+      </li>
     </ul>
   </div>
 </template>
