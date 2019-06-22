@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 const _489c20b3 = () => interopDefault(import('../pages/About.vue' /* webpackChunkName: "pages/About" */))
 const _2c3e13ef = () => interopDefault(import('../pages/Blog/index.vue' /* webpackChunkName: "pages/Blog/index" */))
 const _25403b78 = () => interopDefault(import('../pages/Projects.vue' /* webpackChunkName: "pages/Projects" */))
+const _3e4d4ba7 = () => interopDefault(import('../pages/Team.vue' /* webpackChunkName: "pages/Team" */))
 const _2a8772a7 = () => interopDefault(import('../pages/Blog/_slug.vue' /* webpackChunkName: "pages/Blog/_slug" */))
 const _1e3c48d0 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -94,6 +95,10 @@ export function createRouter() {
       path: "/Projects",
       component: _25403b78,
       name: "Projects"
+    }, {
+      path: "/Team",
+      component: _3e4d4ba7,
+      name: "Team"
     }, {
       path: "/Blog/:slug",
       component: _2a8772a7,
