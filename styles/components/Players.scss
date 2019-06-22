@@ -57,3 +57,32 @@
     @include scut-margin($gutter n n);
   }
 }
+
+
+// Specific to Players--grid
+.Players--grid {
+  display: grid;
+  grid-gap: $gutter;
+  text-align: center;
+
+  grid-template-columns: repeat(1, 1fr);
+
+  @media #{$medium-up} {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .Players-image {
+    img {
+      box-shadow: 4px 4px 4px 0px $gold;
+      border-radius: 8px;
+    }
+  }
+
+  .Players-name {
+    color: $white;
+  }
+
+  .Players-role {
+    color: $maroon-light;
+  }
+}
