@@ -1,6 +1,7 @@
 .Content {
   max-width: 960px;
   margin: 0 auto;
+  @include scut-padding(n $gutter);
 
   h2 {
     font-size: $font-size-bigger;
