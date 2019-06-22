@@ -1,0 +1,22 @@
+query ($id: ID) {
+  contact(where: {id: $id}) {
+    status
+    updatedAt
+    createdAt
+    id
+    heroTitle
+    heroImage {
+      status
+      updatedAt
+      createdAt
+      id
+      handle
+      fileName
+      height
+      width
+      size
+      mimeType
+      url
+    }
+  }
+}

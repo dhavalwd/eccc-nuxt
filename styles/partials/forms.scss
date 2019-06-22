@@ -1,0 +1,480 @@
+// Disabled buttons
+.btn[disabled],
+.Button[disabled] {
+  background-color: #999;
+  border-color: #999;
+}
+
+// Bootstrap overrides
+.help-block {
+  color: $grey;
+  font-size: $font-size-smaller;
+  font-style: italic;
+  line-height: $line-height-tight;
+  margin-bottom: 0;
+}
+label {
+  font-weight: bold;
+  color: $maroon;
+}
+
+// Styles for JS validation
+.form-group.is-required {
+  > label {
+    &:before {
+      content: "* ";
+      color: $red;
+    }
+  }
+}
+.form-group.is-invalid {
+  > label {
+    &:after {
+      color: $error-color;
+    }
+  }
+  // input[type=text],
+  // textarea,
+  // .checkbox.is-customized label:before,
+  // .radio.is-customized label:before,
+  // .custom-select-btn {
+  //   border: 1px $error-color solid;
+  // }
+}
+// Emulate ActiveCommerce styling
+p.form-error {
+  color: $error-color;
+  font-weight: bold;
+  line-height: 1em;
+  margin-top: 8px;
+}
+
+p.form-success {
+  color: $green;
+  font-weight: bold;
+  line-height: 1em;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.form-errors {
+  margin-top: $gutter;
+  display: none;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.parsley-errors-list {
+  display: none;
+  &.filled {
+    display: table;
+  }
+  @include scut-padding(0);
+  @include scut-margin(0);
+
+  background-color: rgba(241, 241, 241, 1);
+  border-radius: 3px;
+  border: 1px $error-color solid;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  margin-top: $gutter * 0.5;
+  line-height: $line-height-tighter;
+
+  margin-right: .5em;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  // .input-group + &,
+  // input + &,
+  // textarea + &,
+  // select + & {
+  //   background: rgba(241, 241, 241, 1);
+  //   background: linear-gradient(
+  //     0deg,
+  //     rgba(245, 245, 245, 1) 0%,
+  //     rgba(241, 241, 241, 1) 80%,
+  //     rgba(224, 224, 224, 1) 100%
+  //   );
+  //   border-top-right-radius: 0;
+  //   border-top-left-radius: 0;
+  //   margin-top: -8px;
+  //   padding-top: 8px;
+  //   z-index: 1;
+  // }
+
+  // transition: 0.4s opacity ease-out;
+
+  li {
+    font-size: 13px;
+    font-weight: bold;
+    list-style-type: none;
+    color: $error-color;
+    line-height: 1em;
+    display: inline;
+  }
+}
+
+// General styles
+form {
+  & + & {
+    margin-top: $gutter;
+  }
+}
+
+@mixin errors-on-row {
+  width: 100%;
+  + .parsley-errors-list {
+    margin-left: 0;
+    margin-top: 8px;
+    width: auto;
+    height: auto;
+  }
+}
+.form-control {
+  z-index: 2;
+  // box-shadow: -2px 3px 10px -6px #ddd;
+
+  .Flex_Grid > div > & {
+    width: 1px;
+    flex-grow: 1;
+    @include errors-on-row;
+  }
+}
+
+textarea.form-control {
+  min-height: 8em;
+}
+
+.input-group {
+  z-index: 2;
+}
+
+input {
+  @extend .form-control;
+  &[readonly] {
+    background-color: #fff !important;
+  }
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-shadow: none;
+  height: auto;
+  border: 0;
+  display: inline-block;
+  width: auto;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  & + &,
+  .Flex_Grid + &,
+  .help-block + & {
+    margin-top: $gutter;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  & + p {
+    margin-top: $gutter;
+  }
+
+  margin-bottom: 0;
+  clear: left;
+}
+
+label.is-checked {
+  font-weight: bold;
+}
+
+button {
+  border-radius: 0 !important;
+}
+
+fieldset {
+  & + & {
+    margin-top: $gutter * 2;
+    padding-top: $gutter * 2;
+    border-top: 1px $light-grey solid;
+  }
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+input[type="text"] {
+  & + & {
+    margin-top: $gutter * 0.5;
+  }
+}
+
+.form-controls-inline {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  > * + * {
+    margin-left: .5em;
+  }
+}
+
+input[type="text"].form-control--inline {
+  & + & {
+    margin-top: 0;
+  }
+}
+
+
+.input-flex {
+  margin-top: -($gutter * 0.5);
+
+  .input-container + & {
+    margin-top: 0;
+  }
+
+  @media (min-width: 400px) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include scut-margin(n (-($gutter * 0.5)));
+  }
+
+  .input-flex-item {
+    margin-top: $gutter * 0.5;
+
+    @media (min-width: 400px) {
+      @include scut-padding(n ($gutter * 0.5));
+      white-space: nowrap;
+      flex-basis: 0;
+      min-width: 200px + $gutter;
+    }
+
+    label {
+      font-size: $font-size-small;
+      white-space: nowrap;
+      margin-right: $gutter;
+      min-height: 1.2em;
+    }
+    // Don't affect checkbox/radio labels — this is for labels above inputs
+    > label {
+      margin-bottom: $gutter * 0.25;
+    }
+  }
+
+  // DD MM YYYY fields
+  &--date {
+    // Always flex
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include scut-margin(n (-($gutter * 0.5)));
+
+    .input-flex-item {
+      @include scut-padding(n ($gutter * 0.5));
+      white-space: nowrap;
+      flex-basis: 0;
+
+      // Reduced size
+      min-width: 72px + $gutter;
+      // Year value is a little bigger..
+      &--year {
+        min-width: 96px + $gutter;
+      }
+
+      // Rounded border manipulation
+      &:not(:first-child):not(:last-child) input,
+      &:not(:first-child):not(:last-child) select {
+        border-radius: 0;
+      }
+      &:first-child input,
+      &:first-child select {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:last-child input,
+      &:last-child select {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+}
+
+// Checkboxes & Radios
+.checkboxes-block,
+.checkboxes-inline,
+.radios-block,
+.radios-inline {
+  @include errors-on-row;
+}
+
+.checkboxes-inline,
+.radios-inline {
+  .checkbox,
+  .radio {
+    display: inline-block;
+  }
+  + div {
+    margin-top: $gutter;
+  }
+}
+
+.checkboxes-block,
+.radios-block {
+  width: 100%;
+  + div {
+    margin-top: $gutter;
+  }
+}
+
+.checkboxes-block {
+  .checkbox {
+    display: table;
+    margin-right: 0;
+  }
+}
+
+.radios-block {
+  .radio {
+    margin-right: $gutter;
+  }
+}
+
+// Customized checkboxes and radio
+// Ideas borrowed from awesome-bootstrap-checkbox
+// How tall are other inputs? We want things to be aligned
+$calc-input-size: 38px;
+// How big do we want our checkboxes and radios?
+$input-size: 24px;
+// Thickness of border on selected radios/checkboxes
+$outside-border-size: 2px;
+
+.checkbox,
+.radio {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: $input-size !important;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .checkboxes-inline &,
+  .radios-inline & {
+    margin: 0 ($gutter * 2) 0 0;
+  }
+
+  .checkboxes-block & + &,
+  .radios-block & + & {
+    margin-top: $gutter;
+  }
+
+  label {
+    line-height: $calc-input-size;
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    @include scut-padding(n n n ($gutter * 0.75));
+
+    color: $text-color;
+    font-size: $font-size-base;
+
+    // All stuff is going to be the size of the input and positioned properly
+    &:before,
+    &:after {
+      @include scut-size($input-size);
+      content: "";
+      position: absolute;
+      left: -($input-size);
+      top: ($calc-input-size - $input-size) * 0.5;
+      display: inline-block;
+    }
+
+    &:before {
+      border: 1px $border-grey solid;
+      border-radius: 3px;
+      background-color: #fff;
+
+      @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out);
+    }
+  }
+
+  // Hide visually
+  input {
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+  }
+
+  input[disabled] {
+    + label:before {
+      background-color: #eef0f2;
+    }
+    + label {
+      color: rgba($text-color, 0.7);
+    }
+  }
+
+  input:focus {
+    + label {
+      &:before {
+        @extend .form-control:focus;
+      }
+    }
+  }
+
+  input:checked {
+    + label:after {
+      cursor: pointer;
+    }
+  }
+}
+
+// Checkbox "checked" styling
+.checkbox {
+  input:checked {
+    + label:before {
+      border: $outside-border-size $maroon solid;
+    }
+    + label:after {
+      background: url("~assets/images/check-square.svg") no-repeat center center;
+      background-size: $input-size - ($outside-border-size * 2) - 6px;
+    }
+  }
+
+  &--empty {
+    + label {
+      padding-left: 0;
+    }
+  }
+}
+
+.radio {
+  label {
+    &:before {
+      border-radius: 99px;
+    }
+  }
+  input:checked {
+    + label:before {
+      background-color: $maroon;
+      border-color: $maroon;
+    }
+    + label:after {
+      border: ($input-size * 0.13) #fff solid;
+      border-radius: 99px;
+      @include scut-size($input-size - ($outside-border-size * 2));
+      margin-left: $outside-border-size;
+      margin-top: $outside-border-size;
+    }
+  }
+}
