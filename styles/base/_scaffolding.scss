@@ -15,5 +15,8 @@
 }
 
 main {
-  margin-top: -140px;
+  margin-top: -90px;
+  @media #{$medium-up} {
+    margin-top: -140px;
+  }
 }
