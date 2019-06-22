@@ -1,10 +1,11 @@
-a.Button {
+a.Button, .Button {
   background: $gold;
   color: $white;
   @include scut-padding(($gutter * 0.5) ($gutter * 2));
   @include scut-margin($gutter n);
   font-family: $font-montserrat;
   font-weight: $font-weight-bold;
+  border: none;
 
   &:hover,
   &:focus {
