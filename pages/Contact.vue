@@ -5,7 +5,7 @@
       </Hero>
       <Section class="Section">
         <template slot="sectionContent">
-          <form name="contact" method="POST" data-netlify="true" class="Form Form--compressed" action="/Contact-success">
+          <form name="contact" method="POST" netlify class="Form Form--compressed" action="/Contact-success">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" class="form-control" id="name" placeholder="Name" required>
