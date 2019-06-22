@@ -6,6 +6,10 @@
       <Section class="Section">
         <template slot="sectionContent">
           <form name="contact" method="POST" netlify class="Form Form--compressed" action="/Contact-success">
+            <!-- <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>Don’t fill this out: <input name="bot-field"></label>
+            </p> -->
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" class="form-control" id="name" placeholder="Name" required>
@@ -18,7 +22,7 @@
               <label for="message">Message</label>
                <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="Provide your message here." required></textarea>
             </div>
-            <button type="submit" class="btn btn-default Button">Submit</button>
+            <button type="submit" class="btn btn-default Button" disabled>Submit</button>
           </form>
         </template>
       </Section>
