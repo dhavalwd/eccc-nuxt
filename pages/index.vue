@@ -107,7 +107,6 @@
 
 <script>
 import home from "~/apollo/queries/home";
-import player from "~/apollo/queries/player";
 import Hero from "~/components/Hero";
 import Section from "~/components/Section";
 const heroBackground = require("~/static/images/home-hero-bg.png");
@@ -115,7 +114,6 @@ const heroBackground = require("~/static/images/home-hero-bg.png");
 export default {
   components: {
     home,
-    player,
     Hero,
     Section,
     heroBackground
