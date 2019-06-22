@@ -5,21 +5,7 @@
       </Hero>
       <Section class="Section">
         <template slot="sectionContent">
-          <form name="contact" method="POST" data-netlify="true" class="Form Form--compressed" action="/Contact-success">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="abc@test.com">
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-               <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="Provide your message here." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-default Button">Submit</button>
-          </form>
+          <p>Thank you for submitting the form. We'll get in touch shortly. Feel free to look at our schedule to see when is the next time we are playing at Commons.</p>
         </template>
       </Section>
     </main>
@@ -50,7 +36,7 @@
     },
     head () {
       return {
-        title: 'Contact | East Coast Cricket Club',
+        title: 'Contact Successful | East Coast Cricket Club',
         meta: [
           { hid: 'contact', name: 'contact', content: 'East Coast Cricket Club (ECCC) was formed as a result of restructure within the Halifax Cricket League (HCL), which is governed by the Nova Scotia Cricket Association (NSCA). The core members of ECCC were part of Halifax Gold team in the former centralized HCL. Halifax Gold dominated the league by winning the HCL championships in 2016 and 2017.' }
         ]
