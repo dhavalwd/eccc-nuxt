@@ -66,7 +66,7 @@
           <h2>{{homeData.ourTeamTitle}}</h2>
         </div>
         <div class="Section-content">
-          <div class="Players">
+          <div class="Players Players-slider">
             <no-ssr>
               <slick ref="slick" :options="slickOptions">
                 <div v-for="playerItem in players" class="Players-item">

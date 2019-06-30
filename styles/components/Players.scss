@@ -2,6 +2,10 @@
   @include scut-padding(n $gutter);
   @include scut-margin(($gutter*2) n);
 
+  &-slider {
+    @include scut-padding(n ($gutter*3));
+  }
+
   @media #{$medium-up} {
     @include scut-padding(n ($gutter*3));
   }
