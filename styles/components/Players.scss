@@ -88,9 +88,17 @@
 
   .Players-name {
     color: $white;
+    font-size: $font-size-larger;
+    @media #{$medium-up} {
+      font-size: $font-size-largest;
+    }
   }
 
   .Players-role {
-    color: $maroon-light;
+    color: lighten($mild-grey, 8%);
+    font-size: $font-size-smallest;
+    @media #{$medium-up} {
+      font-size: $font-size-small;
+    }
   }
 }
