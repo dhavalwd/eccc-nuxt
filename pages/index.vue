@@ -129,6 +129,11 @@ export default {
           name: "east coast cricket club",
           content:
             "East Coast Cricket Club, formerly Halifax Gold, has been most the successful club since the inception of Halifax Cricket league in 2010. We pride ourselves in winning the most championships, the highest player retention and being only club with the most players that represent in the Nova Scotia Provincial team which is the strongest cricket team in Atlantic region."
+        },
+        {
+          hid: `og:image`,
+          property: 'og:image',
+          content: this.homeData.heroImage.url
         }
       ]
     };

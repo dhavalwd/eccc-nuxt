@@ -95,6 +95,11 @@ export default {
           name: "contact",
           content:
             "East Coast Cricket Club (ECCC) was formed as a result of restructure within the Halifax Cricket League (HCL), which is governed by the Nova Scotia Cricket Association (NSCA). The core members of ECCC were part of Halifax Gold team in the former centralized HCL. Halifax Gold dominated the league by winning the HCL championships in 2016 and 2017."
+        },
+        {
+          hid: `og:image`,
+          property: 'og:image',
+          content: this.contactData.heroImage.url
         }
       ]
     };
