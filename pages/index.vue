@@ -99,7 +99,7 @@
             </div>
           </div>
         </div>
-        <nuxt-link :to="homeData.ourSponsorsLink" class="btn Button">{{homeData.ourSponsorsLinkText}}</nuxt-link>
+        <!-- <nuxt-link :to="homeData.ourSponsorsLink" class="btn Button">{{homeData.ourSponsorsLinkText}}</nuxt-link> -->
       </template>
     </Section>
   </main>
