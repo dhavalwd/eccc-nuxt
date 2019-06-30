@@ -106,6 +106,8 @@
 </template>
 
 <script>
+import _ from "lodash";
+
 import home from "~/apollo/queries/home";
 import Hero from "~/components/Hero";
 import Section from "~/components/Section";
@@ -138,9 +140,11 @@ export default {
       variables: { id: "cjwehihwwtsy10830rkh5r7m6" }
     });
 
+    let players = _.sortBy(data.homePage.teamPlayers, ['playerName']);
+
     return {
       homeData: data.homePage,
-      players: data.homePage.teamPlayers,
+      players,
       sponsors: data.homePage.sponsorses
     };
   },
