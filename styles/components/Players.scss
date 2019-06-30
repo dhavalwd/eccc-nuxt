@@ -1,6 +1,10 @@
 .Players {
-  @include scut-padding(n ($gutter*3));
+  @include scut-padding(n $gutter);
   @include scut-margin(($gutter*2) n);
+
+  @media #{$medium-up} {
+    @include scut-padding(n ($gutter*3));
+  }
   &-item {
     @include scut-padding(n $gutter);
 
